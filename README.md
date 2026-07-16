@@ -6,7 +6,7 @@ I used Claude to improve the efficiency and functionality of my code and to anal
 
 
 
-**Key Differences from My Version: **
+**Key Differences from My Version:**
 
 **Spaces, punctuation and numbers:**
 
@@ -16,7 +16,7 @@ Decode bug:**
 
 In your code, shift_amount *= -1 is inside the loop, causing the shift direction to alternate with every character. My version reverses the shift only once before the loop.
 
-**Different approach: **
+**Different Approach:**
 
 Your code uses an alphabet list and .index(), while mine uses ord() and chr() for direct ASCII-based calculations, making it more efficient but slightly more abstract.
 
