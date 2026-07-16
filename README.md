@@ -6,30 +6,33 @@ I used Claude to improve the efficiency and functionality of my code and to anal
 
 
 
-**Key Differences from My Version:**
+**Key Differences from the AI Version:**
+
 
 **Spaces, punctuation and numbers:**
 
-Your code crashes when it encounters non-alphabetic characters, whereas my version leaves them unchanged.
-**
-Decode bug:**
+My original code crashes when it encounters non-alphabetic characters such as spaces, punctuation or numbers. The AI version handles these characters by leaving them unchanged, making the program more reliable and user-friendly.
 
-In your code, shift_amount *= -1 is inside the loop, causing the shift direction to alternate with every character. My version reverses the shift only once before the loop.
+**Decode bug:**
+
+
+In my original code, shift_amount *= -1 is placed inside the loop. This causes the shift direction to change repeatedly as each character is processed. The AI version reverses the shift only once before the loop, ensuring that every character is decoded correctly.
 
 **Different Approach:**
 
-Your code uses an alphabet list and .index(), while mine uses ord() and chr() for direct ASCII-based calculations, making it more efficient but slightly more abstract.
+
+My original code uses an alphabet list and .index() to find the position of each letter. The AI version uses ord() and chr() to perform direct ASCII-based calculations. This makes the code more efficient, although the approach is slightly more abstract for a beginner to understand.
 
 **Case handling:**
 
-Your code converts all input to lowercase, while my version preserves the original uppercase and lowercase formatting.
-
+My original code converts all input to lowercase. The AI version preserves the original uppercase and lowercase formatting, making the output more similar to the original message.
 
 **Points to Improve in the Code:**
 
+
 ~Use a mode parameter with a default value of 'encrypt' to make the function more flexible and easier to use.
 
-~Use a negative shift value for decryption instead of repeatedly modifying the shift inside the loop, making the logic more efficient and avoiding unintended changes.
+~Use a negative shift value for decryption instead of repeatedly modifying the shift inside the loop. This makes the logic more efficient and prevents unintended changes.
 
 ~Use char.isalpha() to identify letters and prevent the program from crashing when spaces, punctuation or numbers are entered.
 
@@ -41,21 +44,18 @@ Your code converts all input to lowercase, while my version preserves the origin
 
 ~Use a list called result to store the processed characters and join them at the end, making the string-building process more efficient.
 
-~Return the encrypted or decrypted text from the function instead of printing the result directly, making the function more reusable in other programs.
+~Return the encrypted or decrypted text from the function instead of printing the result directly. This makes the function more reusable in other programs.
 
-~Use a separate main() function to organise the user input and program flow, improving the overall structure of the code.
+~Use a separate main() function to organise the user input and overall program flow, improving the structure of the code.
 
 ~Use .strip() and .lower() to process user input more effectively and improve input handling.
 
-~Use startswith() to allow the user to enter variations such as words beginning with 'e' or 'd', making the input process more flexible.
+~Use startswith() to allow the user to enter different inputs beginning with 'e' or 'd', making the input process more flexible.
 
 ~Use a docstring to clearly explain the purpose, parameters and return value of the caesar_cipher() function.
 
-
 **CONCEPTS AND IDEAS TO BUILD UPON:**
 
+The main coding concept to build upon is clean code and program structure. Focus on functions and modular programming so that each function performs one specific task. You should also strengthen your understanding of data structures such as lists, strings and dictionaries, which can be used to store and manage data efficiently. Improving your knowledge of control flow and code optimisation is also important, particularly through the use of return and by reducing unnecessary nesting.
 
-The main coding concept you should build upon is clean code and program structure. Focus on functions and modular programming so that each function performs one specific task, along with data structures such as lists, strings and dictionaries to store and manage data efficiently. You should also improve your understanding of control flow and code optimisation, especially using return and reducing unnecessary nesting.
-
-
-Your next major step should be Object-Oriented Programming (OOP). Since you are already working with Python and Tkinter, learning classes and objects will help you structure larger programs more professionally. You should also explore exception handling using try-except and JSON data management for organised storage.
+Your next major step should be Object-Oriented Programming (OOP). Since you are already working with Python and Tkinter, learning about classes and objects will help you structure larger programs in a more organised and professional manner. You should also explore exception handling using try-except to manage invalid user input and JSON data management for storing and organising data effectively.
